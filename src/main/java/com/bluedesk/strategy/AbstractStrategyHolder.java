@@ -18,7 +18,7 @@ public abstract class AbstractStrategyHolder<K, S extends Strategy<K>>
     }
 
     @Override
-    public S getStrategy(final K type) {
+    public final S getStrategy(final K type) {
 	S result = strategies.get(type);
 	if (result == null) {
 	    result = getDefaultStrategy(type);

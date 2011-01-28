@@ -1,4 +1,6 @@
-package com.example.strategy;
+package com.bluedesk.strategy.example;
+
+import com.bluedesk.strategy.AbstractStrategyHolder;
 
 final class ExampleStrategyHolderImpl
 	extends

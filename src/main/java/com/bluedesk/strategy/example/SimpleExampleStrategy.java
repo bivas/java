@@ -1,4 +1,4 @@
-package com.example.strategy;
+package com.bluedesk.strategy.example;
 
 import org.apache.commons.lang.NotImplementedException;
 

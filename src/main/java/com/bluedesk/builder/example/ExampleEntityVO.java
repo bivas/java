@@ -47,21 +47,33 @@ public final class ExampleEntityVO implements ExampleEntity {
     }
 
     public static final Builder newBuilder() {
-	return new Builder();
+	return Builder.create();
     }
 
     public static final Builder newBuilder(final ExampleEntity entity) {
-	return new Builder(entity, true);
+	return Builder.merge(entity);
     }
 
     public static final Builder updateBuilder(final ExampleEntity entity) {
-	return new Builder(entity, false);
+	return Builder.update(entity);
     }
 
     public static final class Builder implements
 	    com.bluedesk.builder.Builder<ExampleEntity> {
 
 	private final ExampleEntityVO vo;
+
+	private static final Builder create() {
+	    return new Builder();
+	}
+
+	private static final Builder merge(final ExampleEntity entity) {
+	    return new Builder(entity, true);
+	}
+
+	private static final Builder update(final ExampleEntity entity) {
+	    return new Builder(entity, false);
+	}
 
 	private Builder() {
 	    vo = new ExampleEntityVO();

@@ -7,8 +7,8 @@ final class ExampleStrategyHolderImpl
 	AbstractStrategyHolder<Class<? extends ExampleStrategy>, ExampleStrategy>
 	implements ExampleStrategyHolder {
 
-    ExampleStrategyHolderImpl(final ExampleStrategy... protobufStrategies) {
-	super(protobufStrategies);
+    ExampleStrategyHolderImpl(final ExampleStrategy... exampleStrategies) {
+	super(exampleStrategies);
     }
 
     @Override

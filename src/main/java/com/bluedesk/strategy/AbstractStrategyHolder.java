@@ -17,9 +17,13 @@ public abstract class AbstractStrategyHolder<K, S extends Strategy<K>>
 	}
     }
 
+    protected final S findByKey(final Object key) {
+	return strategies.get(key);
+    }
+
     @Override
     public final S getStrategy(final K type) {
-	S result = strategies.get(type);
+	S result = findByKey(type);
 	if (result == null) {
 	    result = getDefaultStrategy(type);
 	}
